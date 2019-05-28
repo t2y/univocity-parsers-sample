@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    // for type inference
+    annotationProcessor 'org.projectlombok:lombok:1.18.6'
+    compileOnly 'org.projectlombok:lombok:1.18.6'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.6'
+    testCompileOnly 'org.projectlombok:lombok:1.18.6'
+
+    compile group: 'com.univocity', name: 'univocity-parsers', version: '2.8.2'
+
+    implementation 'com.google.guava:guava:27.0.1-jre'
+    testImplementation 'junit:junit:4.12'
+}
+
+mainClassName = 'com.example.sample.App'
